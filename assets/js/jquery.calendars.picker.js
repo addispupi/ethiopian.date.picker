@@ -411,7 +411,7 @@ $(selector).calendarsPicker({minDate: 0, maxDate: '+1m +1w'}) */
 				<code>null</code> for <code>calendar</code> default.
 			@property {CalendarsPickerCalculateWeek} [calculateWeek=null] Calculate week of the year from a date,
 				<code>null</code> for <code>calendar</code> default.
-			@property {boolean} [localNumbers=false] <code>true</code> to localise numbers (if available),
+			@property {boolean} [localNumbers=true] <code>true</code> to localise numbers (if available),
 				<code>false</code> to use normal Arabic numerals.
 			@property {number|number[]} [monthsToShow=1] How many months to show, cols or [rows, cols].
 			@property {number} [monthsOffset=0] How many months to offset the primary month by;
@@ -471,7 +471,7 @@ $(selector).calendarsPicker({minDate: $.calendars.newDate(2001, 1, 1),
 			fixedWeeks: false,
 			firstDay: null,
 			calculateWeek: null,
-			localNumbers: false,
+			localNumbers: true,
 			monthsToShow: 1,
 			monthsOffset: 0,
 			monthsToStep: 1,
