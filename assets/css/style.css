@@ -20,7 +20,7 @@
 .calendars {
 	background-color: #fff;
 	color: #000;
-	border: 1px solid #444;
+	border: 1px solid #9b9b9b;
     -moz-border-radius: 0.25em;
     -webkit-border-radius: 0.25em;
     border-radius: 0.25em;
@@ -45,13 +45,13 @@
 	text-decoration: none;
 }
 .calendars a.calendars-disabled {
-	color: #888;
+	color: #b0b0b0;
 	cursor: auto;
 }
 .calendars button {
     margin: 0.25em;
     padding: 0.125em 0em;
-    background-color: #fcc;
+    background-color: #1b4609;
     border: none;
     -moz-border-radius: 0.25em;
     -webkit-border-radius: 0.25em;
@@ -61,22 +61,22 @@
 .calendars-nav, .calendars-ctrl {
 	float: left;
 	width: 100%;
-	background-color: #000;
+	background-color: #01213d;
 	color: #fff;
 	font-size: 90%;
 	font-weight: bold;
 }
 .calendars-ctrl {
-	background-color: #600;
+	background-color: #01213d;
 }
 .calendars-cmd {
 	width: 30%;
 }
 .calendars-cmd:hover {
-	background-color: #777;
+	background-color: #45a51d;
 }
 .calendars-ctrl .calendars-cmd:hover {
-	background-color: #f08080;
+	background-color: #45a51d;
 }
 .calendars-cmd-prevJump, .calendars-cmd-nextJump {
 	width: 8%;
@@ -138,14 +138,16 @@ button.calendars-cmd {
 .calendars-month {
 	float: left;
 	width: 15em;
-	border: 1px solid #444;
+	/* border: 1px solid #444; */
 	text-align: center;
 }
 .calendars-month-header, .calendars-month-header select, .calendars-month-header input {
 	height: 1.5em;
-	background-color: #444;
-	color: #fff;
-	font-weight: bold;
+	font-family: Arial, "Noto Sans Ethiopic", Helvetica, Sans-serif;
+	background-color: #f5f7f9;
+	color: #01213d;
+	font-weight: 800;
+	font-size: 1em;
 }
 .calendars-month-header select, .calendars-month-header input {
 	height: 1.4em;
@@ -191,7 +193,7 @@ button.calendars-cmd {
 	display: block;
 	width: 100%;
 	padding: 0.125em 0em;
-	background-color: #eee;
+	background-color: #f5f4f6;
 	color: #000;
 	text-decoration: none;
 }
@@ -207,16 +209,16 @@ button.calendars-cmd {
 	background-color: #fff;
 }
 .calendars-month td .calendars-weekend {
-	background-color: #ddd;
+	background-color: #c2c2c2;
 }
 .calendars-month td .calendars-today {
-	background-color: #f0c0c0;
+	background-color: #d07f0b;
 }
 .calendars-month td .calendars-highlight {
-	background-color: #f08080;
+	background-color: #d07f0b;
 }
 .calendars-month td .calendars-selected {
-	background-color: #777;
+	background-color: #45a51d;
 	color: #fff;
 }
 .calendars-month th.calendars-week {

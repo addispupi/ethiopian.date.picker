@@ -2,7 +2,7 @@
 	'use strict';
 	$.calendarsPicker.regionalOptions['am'] = {
 		renderer: $.calendarsPicker.defaultRenderer,
-		prevText: '< ያለፈ',
+		prevText: '&lt; ያለፈ',
 		prevStatus: 'ያለፈውን ወር አሳይ',
 		prevJumpText: '&#x3c;&#x3c;',
 		prevJumpStatus: 'ያለፈውን ዓመት አሳይ',

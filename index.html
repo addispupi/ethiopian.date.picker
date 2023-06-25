@@ -16,7 +16,7 @@
 <body>
 	<h1>Ethiopian Date Picker የኢትዮጲያ ቀን መቁጠሪያ</h1>
 	
-	<input type="text" id="datepicker" placeholder="Select date">
+	<input type="text" id="datepicker" placeholder="Select date"> <span id="hoverOutput"></span>
 
 	<div id="defaultInline" style="padding: 180px 0px;">
 	</div>
@@ -26,15 +26,19 @@
 	<script src="assets/js/jquery.calendars.picker.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.calendars.picker-am.js"></script>
   <script>
-	// $('#defaultInline').calendarsPicker(); 
+	// $('#defaultInline').calendarsPicker();
     $(document).ready(function() {
       $('#datepicker, #defaultInline').calendarsPicker({
         calendar: $.calendars.instance('ethiopian', 'am'),
-        dateFormat: 'DD, d MM, yyyy', // Customize the date format as needed
+        dateFormat: 'd/m/Y', // Customize the date format as needed (d MM, yyyy)
         monthsToShow: [1, 1], // Show only one month in the date picker
-        showTrigger: '#calImg', // Optionally, you can add an image as the trigger for the date picker
-        regionalOptions: "am" // Set the localization to Amharic
-      });
+		changeMonth: false, // Month Changer
+        // showTrigger: '#calImg', // Optionally, you can add an image as the trigger for the date picker
+       	regionalOptions: ['am'], // Set the localization to Amharic
+		minDate: 0,// $.calendars.newDate(2015, 10, 18, 'ethiopian'), //  Year, Month, Date
+		localNumbers: false, // Ge'ez Numbers on/off
+		multiSelect: 0,
+	});
     });
   </script>
 </body>

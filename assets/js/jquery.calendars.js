@@ -94,6 +94,30 @@ $.calendars.newDate(1379, 10, 12, 'persian') */
 			};
 		},
 
+		/** Digit substitution function for localising Ethiopian style
+			{@linkcode GregorianCalendar.regionalOptions|Calendar digits} option.
+			@memberof Calendars
+			@param {string[]} digits The substitute digits, for 0 through 9.
+			@param {string[]} powers The characters denoting powers of 10, i.e. 1, 10, 100, 1000.
+			@return {CalendarsDigits} The substitution function.
+			@example  */
+		substituteEthiopianDigits: function(digits, powers) {
+			return function(value) {
+				var localNumber = '';
+				var power = 0;
+				while (value > 0) {
+					var units = value % 10;
+					localNumber = (units === 0 ? '' : digits[units] + powers[power]) + localNumber;
+					power++;
+					value = Math.floor(value / 10);
+				}
+				if (localNumber.indexOf(digits[1] + powers[1]) === 0) {
+					localNumber = localNumber.substr(1);
+				}
+				return localNumber || digits[0];
+			};
+		},
+
 		/** Digit substitution function for localising Chinese style numbers via the
 			{@linkcode GregorianCalendar.regionalOptions|Calendar digits} option.
 			@memberof Calendars
