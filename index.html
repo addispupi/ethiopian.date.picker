@@ -21,6 +21,21 @@
 	<div id="defaultInline" style="padding: 180px 0px;">
 	</div>
 	
-	
+	<script src="assets/js/jquery.plugin.js"></script>
+	<script src="assets/js/jquery.calendars.ethiopian.js"></script>
+	<script src="assets/js/jquery.calendars.picker.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.calendars.picker-am.js"></script>
+  <script>
+	// $('#defaultInline').calendarsPicker(); 
+    $(document).ready(function() {
+      $('#datepicker, #defaultInline').calendarsPicker({
+        calendar: $.calendars.instance('ethiopian', 'am'),
+        dateFormat: 'DD, d MM, yyyy', // Customize the date format as needed
+        monthsToShow: [1, 1], // Show only one month in the date picker
+        showTrigger: '#calImg', // Optionally, you can add an image as the trigger for the date picker
+        regionalOptions: "am" // Set the localization to Amharic
+      });
+    });
+  </script>
 </body>
 </html>
